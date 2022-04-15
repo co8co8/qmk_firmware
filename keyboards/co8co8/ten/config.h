@@ -44,3 +44,18 @@
 //#define NO_ACTION_ONESHOT
 
 #define OLED_BRIGHTNESS 100
+
+//LED
+#define RGB_DI_PIN D3
+#ifdef RGB_DI_PIN
+#define RGBLED_NUM 8
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 10
+#define RGBLIGHT_VAL_STEP 10
+#define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
+#define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
+/*== all animations enable ==*/
+//#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#endif /* RGB_DI_PIN*/
