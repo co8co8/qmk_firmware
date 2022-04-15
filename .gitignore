@@ -91,6 +91,11 @@ user_song_list.h
 compile_commands.json
 .clangd/
 .cache/
+
 GPATH
 GRTAGS
 GTAGS
+
+# VIA(L) json files that don't belong in QMK repo
+via*.json
+
