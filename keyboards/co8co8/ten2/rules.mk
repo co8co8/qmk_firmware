@@ -16,3 +16,5 @@ SPLIT_KEYBOARD = no
 LTO_ENABLE = yes
 RGBLIGHT_ENABLE = yes
 DEBOUNCE_TYPE = sym_eager_pk
+ENCODER_ENABLE = yes       # Enables the use of one or more encoders
+

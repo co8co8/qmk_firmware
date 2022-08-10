@@ -47,12 +47,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_ten(
-        RGB_MOD,     KC_KP_SLASH,KC_KP_ASTERISK,KC_KP_MINUS,
+        XXXXXXX,     KC_KP_SLASH,KC_KP_ASTERISK,KC_KP_MINUS,
+        KC_7,        KC_8,       KC_9,          KC_KP_PLUS, 
+        KC_4,        KC_5,       KC_6,          XXXXXXX,    
+        KC_1,        KC_2,       KC_3,          KC_ENTER,   
+        KC_0,        XXXXXXX,    KC_DOT,        XXXXXXX
+        ),
+    [1] = LAYOUT_ten(
+        XXXXXXX,     KC_KP_SLASH,KC_KP_ASTERISK,KC_KP_MINUS,
+        KC_7,        KC_8,       KC_9,          KC_KP_PLUS, 
+        KC_4,        KC_5,       KC_6,          XXXXXXX,    
+        KC_1,        KC_2,       KC_3,          KC_ENTER,   
+        KC_0,        XXXXXXX,    KC_DOT,        XXXXXXX
+        ),
+    [2] = LAYOUT_ten(
+        XXXXXXX,     KC_KP_SLASH,KC_KP_ASTERISK,KC_KP_MINUS,
+        KC_7,        KC_8,       KC_9,          KC_KP_PLUS, 
+        KC_4,        KC_5,       KC_6,          XXXXXXX,    
+        KC_1,        KC_2,       KC_3,          KC_ENTER,   
+        KC_0,        XXXXXXX,    KC_DOT,        XXXXXXX
+        ),
+    [3] = LAYOUT_ten(
+        XXXXXXX,     KC_KP_SLASH,KC_KP_ASTERISK,KC_KP_MINUS,
         KC_7,        KC_8,       KC_9,          KC_KP_PLUS, 
         KC_4,        KC_5,       KC_6,          XXXXXXX,    
         KC_1,        KC_2,       KC_3,          KC_ENTER,   
         KC_0,        XXXXXXX,    KC_DOT,        XXXXXXX
         )
+
 };
 void oled_write_layer_state(void) {
     oled_write_P(PSTR("Layer: "), false);
@@ -164,49 +186,4 @@ bool oled_task_user(void) {
 
 #endif
     return false;
-}
-bool encoder_update_user(uint8_t index, bool clockwise) {
-        if (clockwise) {
-          tap_code(KC_VOLU);
-        } else {
-          tap_code(KC_VOLD);
-        }
-#if 0
-    switch (index) {
-      case _1ST_ENC:
-        if (clockwise) {
-          tap_code(KC_PGDOWN);
-        } else {
-          tap_code(KC_PGUP);
-        }
-        break;
-      case _2ND_ENC:
-        if (clockwise) {
-          tap_code(KC_VOLU);
-        } else {
-          tap_code(KC_VOLD);
-        }
-        break;
-      case _3RD_ENC:
-        if (clockwise) {
-          tap_code16(C(KC_TAB));
-        } else {
-          tap_code16(S(C(KC_TAB)));
-        }
-        break;
-      case _4TH_ENC:
-        if (clockwise) {
-          tap_code16(C(KC_TAB));
-        } else {
-          tap_code16(S(C(KC_TAB)));
-        }
-	/*        if (clockwise) {
-          tap_code16(C(KC_Y));
-        } else {
-          tap_code16(C(KC_Z));
-	  }*/
-        break;
-    }
-#endif
-	return true;
 }
