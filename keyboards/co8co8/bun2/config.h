@@ -21,14 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x6338 //c8
-#define PRODUCT_ID      0x4649
+#define PRODUCT_ID      0x464A
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    co8co8
-#define PRODUCT         b62p by SU120 (4 Rotary Encoders)
-#define DESCRIPTION     bunkatsu 62keys prototype
+#define PRODUCT         bun2(b68)
+#define DESCRIPTION     bunkatsu 68keys
 
 /* key matrix size */
-#define MATRIX_ROWS 5*2 //master: 6 rows, slave: 6 rows
+#define MATRIX_ROWS 5*2 //master: 5 rows, slave: 5 rows
 #define MATRIX_COLS 7
 
 /*
@@ -41,13 +41,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2  }
-#define MATRIX_COL_PINS { B6,E6,D1, D0, D4, C6, D7  }
+#define MATRIX_ROW_PINS { D4,C6,D7,E6,B4  }
+#define MATRIX_COL_PINS { B5,F4,F5,F6,F7,B1,B3  }
 #define UNUSED_PINS
 
 /* Rotary encoder */
-#define ENCODERS_PAD_A { F5, B5 }
-#define ENCODERS_PAD_B { F4, B4 }
+#define ENCODERS_PAD_A { B2,B6 }
+#define ENCODERS_PAD_B { B2,B6 }
 #define ENCODER_RESOLUTION 4
 
 /* COL2ROW, ROW2COL*/
