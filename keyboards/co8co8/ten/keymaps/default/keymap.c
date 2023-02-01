@@ -9,15 +9,15 @@
     C1-C6
     D1-D6
 
-    A6-A1: 7,8,9,-, HOME,PGUP
-    B6-B1: 4,5,6,DEL,END,PGDN
-    C6-c1: 1,2,3,-,UP,-
-    D6-D1: 0,-,-,LEFT,DOWN,RIGHT
+    A6-A1: 7,8,9,     -,HOME,PGUP
+    B6-B1: 4,5,6,   DEL,END ,PGDN
+    C6-c1: 1,2,3,     -,UP  ,-
+    D6-D1: 0,-,RET,LEFT,DOWN,RIGHT
 
     PU  PD  -  R    x x x x
     HM  END UP DWN  x x x x
     -   DEL -  LEFT x x x x
-    9   6   3  -    x x x x
+    9   6   3  RET  x x x x
     8   5   2  -    x x x x
     7   4   1  0    x x x x
   */
@@ -43,11 +43,11 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_ten(
     KC_PGUP,   KC_PGDN, XXXXXXX,  KC_RGHT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    KC_HOME,  KC_END,   KC_UP,   KC_DOWN,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    XXXXXXX,   KC_DEL,   XXXXXXX,   KC_LEFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    KC_9,    KC_6,    KC_3,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    KC_8,    KC_5,    KC_2,    XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    KC_7,    KC_4,    KC_1,    KC_0,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
+    KC_HOME,   KC_END,  KC_UP,    KC_DOWN,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    XXXXXXX,   KC_DEL,  XXXXXXX,  KC_LEFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    KC_9,      KC_6,    KC_3,     KC_ENTER, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    KC_8,      KC_5,    KC_2,     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    KC_7,      KC_4,    KC_1,     KC_0,     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
     )
 };
 void oled_write_layer_state(void) {
